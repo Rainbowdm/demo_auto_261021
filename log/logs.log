@@ -1,0 +1,11 @@
+2021-02-11 20:59:32   INFO [SeleniumTest:26  ] : Get chromedriver
+2021-02-11 20:59:33   INFO [SeleniumTest:31  ] : Open link: https://www.selenium.dev/downloads/
+2021-02-11 20:59:34   INFO [SeleniumTest:37  ] : Open link: https://www.selenium.dev/projects/
+2021-02-11 20:59:34   INFO [SeleniumTest:42  ] : Open link: https://www.selenium.dev/support/
+2021-02-11 20:59:34   INFO [SeleniumTest:48  ] : Number of elements: 5
+2021-02-11 20:59:34   INFO [SeleniumTest:50  ] : Values: Downloads
+2021-02-11 20:59:34   INFO [SeleniumTest:50  ] : Values: Documentation
+2021-02-11 20:59:34   INFO [SeleniumTest:50  ] : Values: Projects
+2021-02-11 20:59:34   INFO [SeleniumTest:50  ] : Values: Support
+2021-02-11 20:59:34   INFO [SeleniumTest:50  ] : Values: Blog
+2021-02-11 20:59:35   INFO [SeleniumTest:53  ] : Close browser
