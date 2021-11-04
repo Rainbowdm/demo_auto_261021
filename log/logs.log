@@ -9,3 +9,11 @@
 2021-02-11 20:59:34   INFO [SeleniumTest:50  ] : Values: Support
 2021-02-11 20:59:34   INFO [SeleniumTest:50  ] : Values: Blog
 2021-02-11 20:59:35   INFO [SeleniumTest:53  ] : Close browser
+2021-04-11 20:05:59   INFO [SeleniumTest:62  ] : Get chromedriver
+2021-04-11 20:06:01   INFO [SeleniumTest:67  ] : Open link: https://www.selenium.dev/downloads/
+2021-04-11 20:09:04   INFO [SeleniumTest:61  ] : Get chromedriver
+2021-04-11 20:09:06   INFO [SeleniumTest:66  ] : Open link: https://www.selenium.dev/downloads/
+2021-04-11 20:09:38   INFO [SeleniumTest:61  ] : Get chromedriver
+2021-04-11 20:09:39   INFO [SeleniumTest:66  ] : Open link: https://www.selenium.dev/downloads/
+2021-04-11 20:09:39   INFO [SeleniumTest:71  ] : Open link: https://www.selenium.dev/projects/
+2021-04-11 20:09:40   INFO [SeleniumTest:76  ] : Close browser
