@@ -21,7 +21,7 @@ public class RegistrationTests extends BaseTests {
         registrationPage.inputLastName("Hulak");
         registrationPage.inputStreet("street New York, 12");
         registrationPage.inputCity("New York");
-        registrationPage.selectState(32);
+        registrationPage.selectState("New York");
         registrationPage.inputPostCode("12345");
         registrationPage.inputMobilePhone("1234567890");
         registrationPage.inputAliasAddress("tesdt23142345tge@gmail.com");
