@@ -2,9 +2,12 @@ package libs;
 
 import org.apache.log4j.Logger;
 import org.junit.Assert;
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.Select;
+
+import static org.hamcrest.CoreMatchers.is;
 
 public class WebElements {
 
@@ -21,7 +24,7 @@ public class WebElements {
      *
      * @param element
      * @param text
-     * */
+     */
     public void inputText(WebElement element, String text) {
         try {
             element.clear();
@@ -36,7 +39,7 @@ public class WebElements {
      * Method click element button
      *
      * @param element
-     * */
+     */
     public void clickOnElement(WebElement element) {
         try {
             element.click();
@@ -54,5 +57,42 @@ public class WebElements {
         } catch (Exception e) {
             Assert.fail("Can't work with element: " + element);
         }
+    }
+
+    public boolean isElementPresent(String text) {
+        try {
+            return webDriver.findElement(By.xpath(text)).isDisplayed();
+        } catch (Exception e) {
+            return false;
+        }
+    }
+
+    public boolean isElementPresent(WebElement element) {
+        try {
+            return element.isDisplayed();
+        } catch (Exception e) {
+            return false;
+        }
+    }
+
+    public void checkTitle(String exTitle) {
+        try {
+            Assert.assertThat("Title matched", webDriver.getTitle(), is(exTitle));
+        } catch (Exception e) {
+            Assert.fail("Can't find title page: " + exTitle);
+        }
+    }
+
+    public void checkTitleInElement(String xpath, String text) {
+        try {
+            String textFromElement = webDriver.findElement(By.xpath(xpath)).getText();
+            Assert.assertThat("Text in element matched", textFromElement, is(text));
+        } catch (Exception e) {
+            Assert.fail("Can't check text in element: " + text);
+        }
+    }
+
+    public void check(String message, boolean actualRes, boolean expectedRes) {
+        Assert.assertThat(message, actualRes, is(expectedRes));
     }
 }

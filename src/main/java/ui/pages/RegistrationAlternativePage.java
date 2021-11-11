@@ -4,9 +4,9 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
-public class RegistrationPage extends MainPage{
+public class RegistrationAlternativePage extends MainPage {
 
-    public RegistrationPage(WebDriver webDriver) {
+    public RegistrationAlternativePage(WebDriver webDriver) {
         super(webDriver);
     }
 
@@ -69,70 +69,86 @@ public class RegistrationPage extends MainPage{
 
     /**
      * Method click to SingIn page
-     * */
-    public void openSignInPage() {
+     */
+    public RegistrationAlternativePage openSignInPage() {
         openUrl("http://automationpractice.com/index.php?controller=authentication&back=my-account");
+        return this;
     }
 
-    public void inputEmailCreate(String email) {
+    public RegistrationAlternativePage inputEmailCreate(String email) {
         webElements.inputText(login, email);
+        return this;
     }
 
-    public void submitButtonCreate() {
+    public RegistrationAlternativePage submitButtonCreate() {
         webElements.clickOnElement(submitButtonCreate);
+        return this;
     }
 
-    public void inputCustomerFN(String firstName) {
+    public RegistrationAlternativePage inputCustomerFN(String firstName) {
         webElements.inputText(customerFirstNameField, firstName);
+        return this;
     }
 
-    public void inputCustomerLN(String lastName) {
+    public RegistrationAlternativePage inputCustomerLN(String lastName) {
         webElements.inputText(customerLastNameField, lastName);
+        return this;
     }
 
-    public void inputEmail(String email) {
+    public RegistrationAlternativePage inputEmail(String email) {
         webElements.inputText(emailField, email);
+        return this;
     }
 
-    public void inputPassword(String password) {
+    public RegistrationAlternativePage inputPassword(String password) {
         webElements.inputText(passwordField, password);
+        return this;
     }
 
-    public void inputFirstName(String fistName) {
+    public RegistrationAlternativePage inputFirstName(String fistName) {
         webElements.inputText(fistNameField, fistName);
+        return this;
     }
 
-    public void inputLastName(String lastName) {
+    public RegistrationAlternativePage inputLastName(String lastName) {
         webElements.inputText(lastNameField, lastName);
+        return this;
     }
 
-    public void inputStreet(String street) {
+    public RegistrationAlternativePage inputStreet(String street) {
         webElements.inputText(streetField, street);
+        return this;
     }
 
-    public void inputCity(String city) {
+    public RegistrationAlternativePage inputCity(String city) {
         webElements.inputText(cityField, city);
+        return this;
     }
 
-    public void selectState(String  text) {
+    public RegistrationAlternativePage selectState(String text) {
         webElements.selectTextInDropDownByText(stateSelect, text);
+        return this;
     }
 
-    public void inputPostCode(String postCode) {
+    public RegistrationAlternativePage inputPostCode(String postCode) {
         webElements.inputText(postCodeField, postCode);
+        return this;
     }
 
-    public void inputMobilePhone(String phone) {
+    public RegistrationAlternativePage inputMobilePhone(String phone) {
         webElements.inputText(phoneMobile, phone);
+        return this;
     }
 
-    public void inputAliasAddress(String alias) {
+    public RegistrationAlternativePage inputAliasAddress(String alias) {
         aliasField.clear();
         aliasField.sendKeys(alias);
         webElements.inputText(aliasField, alias);
+        return this;
     }
 
-    public void clickToButtonSubmitAccount() {
+    public RegistrationAlternativePage clickToButtonSubmitAccount() {
         webElements.clickOnElement(submitButtonAccount);
+        return this;
     }
 }

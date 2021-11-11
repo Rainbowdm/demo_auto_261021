@@ -39,3 +39,63 @@
 2021-09-11 20:39:19   INFO [  MainPage:32  ] : Page was opened: http://automationpractice.com/
 2021-09-11 20:42:20   INFO [RegistrationTests:32  ] : Get chromedriver
 2021-09-11 20:42:24   INFO [  MainPage:32  ] : Page was opened: http://automationpractice.com/
+2021-11-11 20:00:33   INFO [RegistrationTests:41  ] : Get chromedriver
+2021-11-11 20:00:38   INFO [  MainPage:35  ] : Page was opened: http://automationpractice.com/
+2021-11-11 20:00:40   INFO [WebElements:32  ] : tesdtasd32sdgge@gmail.comwas inputted
+2021-11-11 20:00:40   INFO [WebElements:46  ] : Element was clicked: [[ChromeDriver: chrome on WINDOWS (6290bf21e802e6ecc5e5e5962735c377)] -> id: SubmitCreate]
+2021-11-11 20:00:42   INFO [WebElements:32  ] : Dimawas inputted
+2021-11-11 20:00:42   INFO [WebElements:32  ] : Hulakwas inputted
+2021-11-11 20:00:42   INFO [WebElements:32  ] : tesdt23142345tge@gmail.comwas inputted
+2021-11-11 20:00:42   INFO [WebElements:32  ] : qwertyy12312was inputted
+2021-11-11 20:00:43   INFO [WebElements:32  ] : Dimawas inputted
+2021-11-11 20:00:43   INFO [WebElements:32  ] : Hulakwas inputted
+2021-11-11 20:00:43   INFO [WebElements:32  ] : street New York, 12was inputted
+2021-11-11 20:00:43   INFO [WebElements:32  ] : New Yorkwas inputted
+2021-11-11 20:00:43   INFO [WebElements:56  ] : Was selected is DropDown by text: New York
+2021-11-11 20:00:43   INFO [WebElements:32  ] : 12345was inputted
+2021-11-11 20:00:43   INFO [WebElements:32  ] : 1234567890was inputted
+2021-11-11 20:00:43   INFO [WebElements:32  ] : tesdtasd32sdgge@gmail.comwas inputted
+2021-11-11 20:00:45   INFO [WebElements:46  ] : Element was clicked: [[ChromeDriver: chrome on WINDOWS (6290bf21e802e6ecc5e5e5962735c377)] -> id: submitAccount]
+2021-11-11 20:29:20   INFO [RegistrationTests:57  ] : chromewill be started
+2021-11-11 20:29:21   INFO [RegistrationTests:61  ] : chromeis started
+2021-11-11 20:29:26   INFO [  MainPage:35  ] : Page was opened: http://automationpractice.com/
+2021-11-11 20:29:27   INFO [WebElements:32  ] : 235sdggsdg4@gmail.comwas inputted
+2021-11-11 20:29:27   INFO [WebElements:46  ] : Element was clicked: [[ChromeDriver: chrome on WINDOWS (4749321d8647db5576f3a72cb00eccb3)] -> id: SubmitCreate]
+2021-11-11 20:29:29   INFO [WebElements:32  ] : Dimawas inputted
+2021-11-11 20:29:29   INFO [WebElements:32  ] : Hulakwas inputted
+2021-11-11 20:29:29   INFO [WebElements:32  ] : 235sdggsdg4@gmail.comwas inputted
+2021-11-11 20:29:29   INFO [WebElements:32  ] : qwertyy12312was inputted
+2021-11-11 20:29:30   INFO [WebElements:32  ] : Dimawas inputted
+2021-11-11 20:29:30   INFO [WebElements:32  ] : Hulakwas inputted
+2021-11-11 20:29:30   INFO [WebElements:32  ] : street New York, 12was inputted
+2021-11-11 20:29:30   INFO [WebElements:32  ] : New Yorkwas inputted
+2021-11-11 20:29:30   INFO [WebElements:56  ] : Was selected is DropDown by text: New York
+2021-11-11 20:29:30   INFO [WebElements:32  ] : 12345was inputted
+2021-11-11 20:29:30   INFO [WebElements:32  ] : 1234567890was inputted
+2021-11-11 20:29:30   INFO [WebElements:32  ] : 235sdggsdg4@gmail.comwas inputted
+2021-11-11 20:29:44   INFO [WebElements:46  ] : Element was clicked: Proxy element for: DefaultElementLocator 'By.id: submitAccount'
+2021-11-11 20:29:44   INFO [RegistrationTests:63  ] : firefoxwill be started
+2021-11-11 20:29:49   INFO [RegistrationTests:67  ] : firefoxis started
+2021-11-11 20:29:54   INFO [  MainPage:35  ] : Page was opened: http://automationpractice.com/
+2021-11-11 20:29:55   INFO [WebElements:32  ] : 235sdggsdg4@gmail.comwas inputted
+2021-11-11 20:29:56   INFO [WebElements:46  ] : Element was clicked: [[FirefoxDriver: firefox on WINDOWS (9bb653ce-6a40-457c-8823-6a05ffda01d8)] -> id: SubmitCreate]
+2021-11-11 20:34:00   INFO [RegistrationTests:57  ] : chromewill be started
+2021-11-11 20:34:00   INFO [RegistrationTests:63  ] : firefoxwill be started
+2021-11-11 20:34:02   INFO [RegistrationTests:61  ] : chromeis started
+2021-11-11 20:34:04   INFO [RegistrationTests:67  ] : firefoxis started
+2021-11-11 20:34:06   INFO [  MainPage:35  ] : Page was opened: http://automationpractice.com/
+2021-11-11 20:34:08   INFO [WebElements:32  ] : tesdt23142345tge@gmail.comwas inputted
+2021-11-11 20:34:08   INFO [WebElements:46  ] : Element was clicked: [[ChromeDriver: chrome on WINDOWS (f63bb8a88e9c474c0d75d6706ea73b47)] -> id: SubmitCreate]
+2021-11-11 20:34:09   INFO [  MainPage:35  ] : Page was opened: http://automationpractice.com/
+2021-11-11 20:34:11   INFO [WebElements:32  ] : tesdt23142345tge@gmail.comwas inputted
+2021-11-11 20:34:11   INFO [WebElements:46  ] : Element was clicked: [[FirefoxDriver: firefox on WINDOWS (93c3b3f1-a04e-46e8-9eb5-a2dfc9952df9)] -> id: SubmitCreate]
+2021-11-11 20:34:29   INFO [RegistrationTests:57  ] : chromewill be started
+2021-11-11 20:34:30   INFO [RegistrationTests:61  ] : chromeis started
+2021-11-11 20:34:32   INFO [RegistrationTests:63  ] : firefoxwill be started
+2021-11-11 20:34:35   INFO [RegistrationTests:67  ] : firefoxis started
+2021-11-11 20:34:36   INFO [  MainPage:35  ] : Page was opened: http://automationpractice.com/
+2021-11-11 20:34:38   INFO [WebElements:32  ] : 235sdggsdg4@gmail.comwas inputted
+2021-11-11 20:34:38   INFO [WebElements:46  ] : Element was clicked: [[ChromeDriver: chrome on WINDOWS (2c6824d575037939dd11829d85cd0d50)] -> id: SubmitCreate]
+2021-11-11 20:34:40   INFO [  MainPage:35  ] : Page was opened: http://automationpractice.com/
+2021-11-11 20:34:42   INFO [WebElements:32  ] : 235sdggsdg4@gmail.comwas inputted
+2021-11-11 20:34:42   INFO [WebElements:46  ] : Element was clicked: [[FirefoxDriver: firefox on WINDOWS (60da2822-f93c-4f0e-9e9f-a58c0d3e85a7)] -> id: SubmitCreate]
