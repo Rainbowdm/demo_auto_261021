@@ -1,13 +1,11 @@
 package libs;
 
 import org.apache.log4j.Logger;
-import org.junit.Assert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.Select;
-
-import static org.hamcrest.CoreMatchers.is;
+import org.testng.Assert;
 
 public class WebElements {
 
@@ -49,6 +47,30 @@ public class WebElements {
         }
     }
 
+    public void clickRadioButton(WebElement element, String text) {
+        try {
+            boolean status = element.isDisplayed();
+            if (status) {
+                logger.info("Checkbox is initially checked");
+            } else {
+                element.click();
+                logger.info("Element was clicked: " + element);
+            }
+        } catch (Exception e) {
+            Assert.fail("Can't work with element: " + element);
+        }
+    }
+
+    public void selectValueInDropDown(WebElement element, String value) {
+        try {
+            Select optionsFromDropDown = new Select(element);
+            optionsFromDropDown.selectByValue(value);
+            logger.info("Was selected is value: " + value);
+        } catch (Exception e) {
+            Assert.fail("Can't work with element: " + element);
+        }
+    }
+
     public void selectTextInDropDownByText(WebElement element, String text) {
         try {
             Select optionsFromDropDown = new Select(element);
@@ -77,7 +99,7 @@ public class WebElements {
 
     public void checkTitle(String exTitle) {
         try {
-            Assert.assertThat("Title matched", webDriver.getTitle(), is(exTitle));
+            Assert.assertEquals(webDriver.getTitle(), exTitle);
         } catch (Exception e) {
             Assert.fail("Can't find title page: " + exTitle);
         }
@@ -86,13 +108,13 @@ public class WebElements {
     public void checkTitleInElement(String xpath, String text) {
         try {
             String textFromElement = webDriver.findElement(By.xpath(xpath)).getText();
-            Assert.assertThat("Text in element matched", textFromElement, is(text));
+            Assert.assertEquals(textFromElement, text);
         } catch (Exception e) {
             Assert.fail("Can't check text in element: " + text);
         }
     }
 
-    public void check(String message, boolean actualRes, boolean expectedRes) {
-        Assert.assertThat(message, actualRes, is(expectedRes));
+    public void check(boolean actualRes, boolean expectedRes) {
+        Assert.assertEquals(actualRes, expectedRes);
     }
 }
