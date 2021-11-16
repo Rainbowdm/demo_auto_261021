@@ -3,26 +3,18 @@ package baseTest;
 import com.github.javafaker.Faker;
 import libs.Utils;
 import org.apache.log4j.Logger;
-import org.junit.After;
-import org.junit.Before;
-import org.junit.Rule;
-import org.junit.rules.TestName;
-import org.junit.runner.RunWith;
-import org.junit.runners.Parameterized;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
-import ui.pages.MainPage;
-import ui.pages.MyAccountPage;
-import ui.pages.RegistrationAlternativePage;
-import ui.pages.RegistrationPage;
+import org.testng.annotations.AfterClass;
+import org.testng.annotations.BeforeClass;
+import org.testng.annotations.Optional;
+import org.testng.annotations.Parameters;
+import ui.pages.*;
 
 import java.io.File;
-import java.util.Arrays;
-import java.util.Collection;
 import java.util.concurrent.TimeUnit;
 
-@RunWith(value = Parameterized.class)
 public class BaseTests {
 
     private WebDriver webDriver;
@@ -32,36 +24,25 @@ public class BaseTests {
     public RegistrationPage registrationPage;
     public MyAccountPage myAccountPage;
     public RegistrationAlternativePage registrationAlternativePage;
+    public SignInPage signInPage;
     public Utils utils = new Utils();
     public Faker faker = new Faker();
 
     public String patchToScreenShot;
-    public String browser;
 
-    public BaseTests(String browser) {
-        this.browser = browser;
+    public BaseTests() {
     }
 
-    @Parameterized.Parameters
-    public static Collection testData() {
-        return Arrays.asList(new Object[][]{
-                {"chrome"},
-                {"firefox"}
-        });
-    }
-
-    @Rule
-    public TestName testName = new TestName();
-
-    @Before
-    public void setUp() {
-        if ("chrome".equals(browser)) {
+    @Parameters("browserName")
+    @BeforeClass
+    public void setUp(@Optional("chrome") String browser) {
+        if (browser.toLowerCase().equals("chrome")) {
             logger.info(browser + "will be started");
             File fileChrome = new File("./drivers/chromedriver.exe");
             System.setProperty("webdriver.chrome.driver", fileChrome.getAbsolutePath());
             webDriver = new ChromeDriver();
             logger.info(browser + "is started");
-        } else if ("firefox".equals(browser)) {
+        } else if (browser.toLowerCase().equals("firefox")) {
             logger.info(browser + "will be started");
             File fileFirefox = new File("./drivers/geckodriver.exe");
             System.setProperty("webdriver.gecko.driver", fileFirefox.getAbsolutePath());
@@ -75,8 +56,7 @@ public class BaseTests {
         File file = new File("");
         patchToScreenShot = file.getAbsolutePath() + "\\screenShot" + "-" +
                 this.getClass().getPackage().getName() + "\\" +
-                this.getClass().getSimpleName() +
-                "\\" + this.testName.getMethodName() + "-" + browser + ".png";
+                this.getClass().getSimpleName() + ".png";
 
         initPages();
     }
@@ -86,9 +66,10 @@ public class BaseTests {
         registrationPage = new RegistrationPage(webDriver);
         myAccountPage = new MyAccountPage(webDriver);
         registrationAlternativePage = new RegistrationAlternativePage(webDriver);
+        signInPage = new SignInPage(webDriver);
     }
 
-    @After
+    @AfterClass
     public void tearDown() {
         if (!(webDriver == null)) {
             utils.screenShot(patchToScreenShot, webDriver);

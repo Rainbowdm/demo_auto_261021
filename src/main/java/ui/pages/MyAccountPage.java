@@ -16,6 +16,9 @@ public class MyAccountPage extends MainPage{
     @FindBy(xpath = "//h1[@class='page-heading']")
     public WebElement titleMyAccount;
 
+    @FindBy(xpath = "//a[@class='account']/span")
+    public WebElement accountBtn;
+
     public String checkTitle() {
         WebElement titleElement =
                 (new WebDriverWait(webDriver, 10))
@@ -28,7 +31,11 @@ public class MyAccountPage extends MainPage{
         return true;
     }
 
-    public void checkTitle(String message, boolean actualRes, boolean expectedRes) {
-        webElements.check(message, actualRes, expectedRes);
+    public void checkTitle(boolean actualRes, boolean expectedRes) {
+        webElements.check(actualRes, expectedRes);
+    }
+
+    public String getAccountName() {
+        return accountBtn.getText();
     }
 }
