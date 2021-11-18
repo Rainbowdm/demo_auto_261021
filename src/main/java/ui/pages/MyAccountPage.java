@@ -1,5 +1,6 @@
 package ui.pages;
 
+import io.qameta.allure.Step;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -19,6 +20,7 @@ public class MyAccountPage extends MainPage{
     @FindBy(xpath = "//a[@class='account']/span")
     public WebElement accountBtn;
 
+    @Step("Check title")
     public String checkTitle() {
         WebElement titleElement =
                 (new WebDriverWait(webDriver, 10))
@@ -26,6 +28,7 @@ public class MyAccountPage extends MainPage{
         return titleMyAccount.getText();
     }
 
+    @Step("Check title on page: {title}")
     public boolean checkTitleTextOnPage(String title) {
         webElements.checkTitle(title);
         return true;
@@ -35,6 +38,7 @@ public class MyAccountPage extends MainPage{
         webElements.check(actualRes, expectedRes);
     }
 
+    @Step("Get account user name")
     public String getAccountName() {
         return accountBtn.getText();
     }
