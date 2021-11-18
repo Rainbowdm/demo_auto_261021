@@ -49,7 +49,7 @@ public class WebElements {
 
     public void clickRadioButton(WebElement element, String text) {
         try {
-            boolean status = element.isDisplayed();
+            boolean status = element.isSelected();
             if (status) {
                 logger.info("Checkbox is initially checked");
             } else {

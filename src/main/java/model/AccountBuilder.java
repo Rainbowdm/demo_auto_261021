@@ -47,7 +47,7 @@ public class AccountBuilder {
         return this;
     }
 
-    public AccountBuilder withBirthday(String birthday) {
+    public AccountBuilder withBirthday(String day) {
         this.day = day;
         return this;
     }
