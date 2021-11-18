@@ -1,5 +1,6 @@
 package ui.pages;
 
+import io.qameta.allure.Step;
 import model.Account;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -71,6 +72,7 @@ public class RegistrationAlternativePage extends MainPage {
     @FindBy(id = "submitAccount")
     public WebElement submitButtonAccount;
 
+    @Step("Select gender: {gender}")
     public RegistrationAlternativePage selectGender(String gender) {
         if (gender.equals("Mr.")) {
             webElements.clickRadioButton(genderMr, gender);
@@ -80,88 +82,103 @@ public class RegistrationAlternativePage extends MainPage {
         return this;
     }
 
+    @Step("Input customer first name; {firstName}")
     public RegistrationAlternativePage inputCustomerFN(String firstName) {
         webElements.inputText(customerFirstNameField, firstName);
         return this;
     }
 
+    @Step("Input customer last name; {lastName}")
     public RegistrationAlternativePage inputCustomerLN(String lastName) {
         webElements.inputText(customerLastNameField, lastName);
         return this;
     }
 
+    @Step("Input email: {email}")
     public RegistrationAlternativePage inputEmail(String email) {
         webElements.inputText(emailField, email);
         return this;
     }
 
+    @Step("Input password: {password}")
     public RegistrationAlternativePage inputPassword(String password) {
         webElements.inputText(passwordField, password);
         return this;
     }
 
+    @Step("Select birthday: {day}")
     public RegistrationAlternativePage selectBirthday(String day) {
         webElements.selectValueInDropDown(daysInDropDown, day);
         return this;
     }
 
+    @Step("Select birthday month: {month}")
     public RegistrationAlternativePage selectMonth(String month) {
         webElements.selectValueInDropDown(monthsInDropDown, month);
         return this;
     }
 
+    @Step("Select birth year: {year}")
     public RegistrationAlternativePage selectYear(String year) {
         webElements.selectValueInDropDown(yearsInDropDown, year);
         return this;
     }
 
-    public RegistrationAlternativePage inputFirstName(String fistName) {
-        webElements.inputText(fistNameField, fistName);
+    @Step("Input first name: {firstName}")
+    public RegistrationAlternativePage inputFirstName(String firstName) {
+        webElements.inputText(fistNameField, firstName);
         return this;
     }
 
+    @Step("Input last name: {lastName}")
     public RegistrationAlternativePage inputLastName(String lastName) {
         webElements.inputText(lastNameField, lastName);
         return this;
     }
 
+    @Step("Input street: {street}")
     public RegistrationAlternativePage inputStreet(String street) {
         webElements.inputText(streetField, street);
         return this;
     }
 
+    @Step("Input city: {city}")
     public RegistrationAlternativePage inputCity(String city) {
         webElements.inputText(cityField, city);
         return this;
     }
 
+    @Step("Select state: {text}")
     public RegistrationAlternativePage selectState(String text) {
         webElements.selectTextInDropDownByText(stateSelect, text);
         return this;
     }
 
+    @Step("Select country: {text}")
     public RegistrationAlternativePage selectCountry(String text) {
         webElements.selectTextInDropDownByText(countryField, text);
         return this;
     }
 
+    @Step("Input post code: {postCode}")
     public RegistrationAlternativePage inputPostCode(String postCode) {
         webElements.inputText(postCodeField, postCode);
         return this;
     }
 
+    @Step("Input mobile: {mobile}")
     public RegistrationAlternativePage inputMobilePhone(String phone) {
         webElements.inputText(phoneMobile, phone);
         return this;
     }
 
+    @Step("Input alias: {alias}")
     public RegistrationAlternativePage inputAliasAddress(String alias) {
-        aliasField.clear();
-        aliasField.sendKeys(alias);
         webElements.inputText(aliasField, alias);
         return this;
     }
 
+    @Step("Submit account")
     public RegistrationAlternativePage clickToButtonSubmitAccount() {
         webElements.clickOnElement(submitButtonAccount);
         return this;
