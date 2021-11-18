@@ -28,6 +28,7 @@ public class RegistrationPageDataProvider {
                                 .withAddress2("street New York, 14")
                                 .withCity("New York")
                                 .withState("New York")
+                                .withPostCode("12345")
                                 .withCountry("United States")
                                 .withPhoneNumber("1234567890")
                                 .withAlias("Hello!")
