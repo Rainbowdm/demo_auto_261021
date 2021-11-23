@@ -1,13 +1,14 @@
-package ui.pages;
+package ui.pages.pagesSelenium;
 
+import io.qameta.allure.Step;
 import model.Account;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
-public class RegistrationPage extends MainPage {
+public class RegistrationAlternativePage extends MainPage {
 
-    public RegistrationPage(WebDriver webDriver) {
+    public RegistrationAlternativePage(WebDriver webDriver) {
         super(webDriver);
     }
 
@@ -71,86 +72,119 @@ public class RegistrationPage extends MainPage {
     @FindBy(id = "submitAccount")
     public WebElement submitButtonAccount;
 
-    public void selectGender(String gender) {
+    @Step("Select gender: {gender}")
+    public RegistrationAlternativePage selectGender(String gender) {
         if (gender.equals("Mr.")) {
             webElements.clickRadioButton(genderMr, gender);
         } else {
             webElements.clickRadioButton(genderMrs, gender);
         }
+        return this;
     }
 
-    public void inputCustomerFN(String firstName) {
+    @Step("Input customer first name; {firstName}")
+    public RegistrationAlternativePage inputCustomerFN(String firstName) {
         webElements.inputText(customerFirstNameField, firstName);
+        return this;
     }
 
-    public void inputCustomerLN(String lastName) {
+    @Step("Input customer last name; {lastName}")
+    public RegistrationAlternativePage inputCustomerLN(String lastName) {
         webElements.inputText(customerLastNameField, lastName);
+        return this;
     }
 
-    public void inputEmail(String email) {
+    @Step("Input email: {email}")
+    public RegistrationAlternativePage inputEmail(String email) {
         webElements.inputText(emailField, email);
+        return this;
     }
 
-    public void inputPassword(String password) {
+    @Step("Input password: {password}")
+    public RegistrationAlternativePage inputPassword(String password) {
         webElements.inputText(passwordField, password);
+        return this;
     }
 
-    public void selectBirthday(String day) {
+    @Step("Select birthday: {day}")
+    public RegistrationAlternativePage selectBirthday(String day) {
         webElements.selectValueInDropDown(daysInDropDown, day);
+        return this;
     }
 
-    public void selectMonth(String month) {
+    @Step("Select birthday month: {month}")
+    public RegistrationAlternativePage selectMonth(String month) {
         webElements.selectValueInDropDown(monthsInDropDown, month);
+        return this;
     }
 
-    public void selectYear(String year) {
+    @Step("Select birth year: {year}")
+    public RegistrationAlternativePage selectYear(String year) {
         webElements.selectValueInDropDown(yearsInDropDown, year);
+        return this;
     }
 
-
-    public void inputFirstName(String fistName) {
-        webElements.inputText(fistNameField, fistName);
+    @Step("Input first name: {firstName}")
+    public RegistrationAlternativePage inputFirstName(String firstName) {
+        webElements.inputText(fistNameField, firstName);
+        return this;
     }
 
-    public void inputLastName(String lastName) {
+    @Step("Input last name: {lastName}")
+    public RegistrationAlternativePage inputLastName(String lastName) {
         webElements.inputText(lastNameField, lastName);
+        return this;
     }
 
-    public void inputStreet(String street) {
+    @Step("Input street: {street}")
+    public RegistrationAlternativePage inputStreet(String street) {
         webElements.inputText(streetField, street);
+        return this;
     }
 
-    public void inputCity(String city) {
+    @Step("Input city: {city}")
+    public RegistrationAlternativePage inputCity(String city) {
         webElements.inputText(cityField, city);
+        return this;
     }
 
-    public void selectState(String text) {
+    @Step("Select state: {text}")
+    public RegistrationAlternativePage selectState(String text) {
         webElements.selectTextInDropDownByText(stateSelect, text);
+        return this;
     }
 
-    public void selectCountry(String text) {
+    @Step("Select country: {text}")
+    public RegistrationAlternativePage selectCountry(String text) {
         webElements.selectTextInDropDownByText(countryField, text);
+        return this;
     }
 
-    public void inputPostCode(String postCode) {
+    @Step("Input post code: {postCode}")
+    public RegistrationAlternativePage inputPostCode(String postCode) {
         webElements.inputText(postCodeField, postCode);
+        return this;
     }
 
-    public void inputMobilePhone(String phone) {
+    @Step("Input mobile: {mobile}")
+    public RegistrationAlternativePage inputMobilePhone(String phone) {
         webElements.inputText(phoneMobile, phone);
+        return this;
     }
 
-    public void inputAliasAddress(String alias) {
-        aliasField.clear();
-        aliasField.sendKeys(alias);
+    @Step("Input alias: {alias}")
+    public RegistrationAlternativePage inputAliasAddress(String alias) {
         webElements.inputText(aliasField, alias);
+        return this;
     }
 
-    public void clickToButtonSubmitAccount() {
+    @Step("Submit account")
+    public RegistrationAlternativePage clickToButtonSubmitAccount() {
         webElements.clickOnElement(submitButtonAccount);
+        return this;
     }
 
-    public RegistrationPage registrationNewUser(Account account) {
+    public RegistrationAlternativePage registrationNewUser(Account account) {
         selectGender(account.getGender());
         inputCustomerFN(account.getFirstCustomerName());
         inputCustomerLN(account.getLastCustomerName());
