@@ -30,26 +30,26 @@ public class HumanTests extends BaseTest {
         Assert.assertEquals("application/json", r.response.extract().contentType());
     }
 
-    @Test
-    void test() {
-        List<Human> humans = peopleApiServices.getPeople()
-                .shouldHave(statusCode(200))
-                .shouldHave(body("name", is(notNullValue())))
-                .response.extract().body().jsonPath().get();
-        Assert.assertTrue(humans.size() > 0);
-        Assert.assertEquals("height", humans.get(0).height);
-    }
-
-    Human human = new Human()
-            .setName("Luke Skywalker")
-            .setHeight("172");
-
-    @Test
-    void test2() {
-        Human human = peopleApiServices.getPeople()
-                .shouldHave(statusCode(200))
-                .response.extract().body().as(Human.class);
-        Assert.assertEquals("name", human.name);
-        Assert.assertEquals("height", human.height);
-    }
+//    @Test
+//    void test() {
+//        List<Human> humans = peopleApiServices.getPeople()
+//                .shouldHave(statusCode(200))
+//                .shouldHave(body("name", is(notNullValue())))
+//                .response.extract().body().jsonPath().get();
+//        Assert.assertTrue(humans.size() > 0);
+//        Assert.assertEquals("height", humans.get(0).height);
+//    }
+//
+//    Human human = new Human()
+//            .setName("Luke Skywalker")
+//            .setHeight("172");
+//
+//    @Test
+//    void test2() {
+//        Human human = peopleApiServices.getPeople()
+//                .shouldHave(statusCode(200))
+//                .response.extract().body().as(Human.class);
+//        Assert.assertEquals("name", human.name);
+//        Assert.assertEquals("height", human.height);
+//    }
 }
